@@ -1,0 +1,14 @@
+﻿# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor
+.vscode/
+
+# Temporary
+*.tmp
+*.temp
+
+# Source asli
+source_original.html
