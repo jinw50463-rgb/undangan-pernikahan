@@ -1633,5 +1633,20 @@ loadWishes();
   loop();
 })();
 </script>
+
+<!-- Script to handle dynamic guest name -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const guestName = urlParams.get('to');
+    if (guestName) {
+      const guestElement = document.querySelector('.cv-guest');
+      if (guestElement) {
+        // Use textContent to prevent XSS
+        guestElement.textContent = guestName;
+      }
+    }
+  });
+</script>
 </body>
 </html>
